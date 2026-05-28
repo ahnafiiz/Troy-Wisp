@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We've moved homes...</title>
+  <meta name="description" content="This page has moved to a new address. Click below to visit our new home." />
+  <link rel="canonical" href="https://troy-os.vercel.app" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent:       #1A6DFF;
+      --accent-hover: #0052d6;
+      --bg:           #0c0c0c;
+      --text:         #f8faff;
+      --muted:        #64748b;
+      --art-stroke:   #2e3a4e;
+      --art-fill:     #161b25;
+      --art-screen:   #0a0f1a;
+      --art-bar:      #1a2030;
+      --art-green:    #6ee7b7;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .wrap {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      max-width: 860px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .art { flex: 0 0 340px; }
+    .art svg {
+      width: 100%;
+      height: auto;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .copy { flex: 1; min-width: 240px; }
+
+    .big {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(60px, 11vw, 104px);
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 380px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 28px;
+      border-radius: 9px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn:hover  { background: var(--accent-hover); }
+    .btn:active { transform: scale(0.97); }
+    .btn svg {
+      width: 16px; height: 16px;
+      stroke: #fff; fill: none; flex-shrink: 0;
+    }
+
+    .new-url {
+      display: block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .new-url a { color: var(--accent); text-decoration: none; }
+    .new-url a:hover { text-decoration: underline; }
+
+    footer {
+      position: fixed;
+      bottom: 1.5rem;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .wrap { flex-direction: column; align-items: flex-start; gap: 2rem; }
+      .art { flex: none; width: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="art">
+      <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A computer monitor showing TROY">
+
+        <!-- Monitor outer frame -->
+        <rect x="20" y="10" width="280" height="190" rx="14" fill="var(--art-fill)" stroke="var(--art-stroke)" stroke-width="1.5"/>
+        <!-- Title bar -->
+        <rect x="20" y="10" width="280" height="34" rx="14" fill="var(--art-bar)"/>
+        <rect x="20" y="30" width="280" height="14" fill="var(--art-bar)"/>
+        <!-- Traffic-light dots -->
+        <circle cx="44" cy="27" r="6" fill="#f9a8a8" opacity="0.85"/>
+        <circle cx="62" cy="27" r="6" fill="#fcd34d" opacity="0.85"/>
+        <circle cx="80" cy="27" r="6" fill="var(--art-green)" opacity="0.85"/>
+        <!-- Screen -->
+        <rect x="34" y="52" width="252" height="136" rx="6" fill="var(--art-screen)"/>
+        <!-- Subtle screen glow -->
+        <rect x="34" y="52" width="252" height="136" rx="6" fill="none" stroke="var(--accent)" stroke-width="0.5" opacity="0.3"/>
+
+        <!-- TROY text on screen -->
+        <text x="160" y="114" text-anchor="middle" font-family="Syne,sans-serif" font-size="50" font-weight="800" fill="var(--accent)">TROY</text>
+        <!-- moving homes text -->
+        <text x="160" y="146" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="var(--muted)">moving homes.</text>
+
+        <!-- Stand neck -->
+        <rect x="140" y="200" width="40" height="30" rx="4" fill="var(--art-stroke)"/>
+        <!-- Stand base -->
+        <rect x="108" y="228" width="104" height="12" rx="6" fill="var(--art-stroke)"/>
+
+      </svg>
+    </div>
+
+    <div class="copy">
+      <div class="big">GGS</div>
+      <h1>We've moved to a new address</h1>
+      <p>This website has a new home. Click the button below to be redirected to the new address.</p>
+
+      <a href="https://troy-os.vercel.app" class="btn">
+        Take me to the new site
+        <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+
+      <span class="new-url">
+        New address: <a href="https://troy-os.vercel.app">Troy OS</a>
+      </span>
+    </div>
+  </div>
+
+  <footer>Troy OS | Moving Homes</footer>
+
+</body>
+</html>
